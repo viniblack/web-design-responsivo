@@ -1,6 +1,6 @@
 .secao {
   float: left;
-  width: 33,33;
+  width: 33, 33;
 }
 
 .mini {
@@ -8,10 +8,11 @@
   width: 50%;
 }
 
-.container{
+.container {
   margin: 0 auto;
   max-width: 1200px;
 }
+
 .logo,
 .secao {
   padding: 0 1%;
@@ -29,35 +30,39 @@ img {
 .busca,
 .barra-nav,
 .menu-principal {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
+
 .menu-principal li {
-    float: left;
+  float: left;
 }
 
 header {
   padding: 0.5em 0;
 }
+
 .destaques {
   margin-top: 1em;
 }
+
 .barra-nav {
   margin: 0.4em 0;
 }
 
 @media (min-width: 600px) {
   html {
-      font-size: 1.125em;
+    font-size: 1.125em;
   }
 
   .secao {
     width: 50%;
   }
 }
+
 @media (min-width: 1000px) {
   html {
-      font-size: 1.25em;
+    font-size: 1.25em;
   }
 
   .secao {
@@ -66,10 +71,11 @@ header {
 }
 
 @media not all and (max-width: 600px) {
+
   .menu-abrir,
   .menu-fechar {
-      display: none;
-  }    
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
@@ -89,7 +95,7 @@ header {
 
     transition: left 0.3s ease-out;
   }
-  
+
   .menu-ativo .barra-nav {
     left: 0;
   }
@@ -107,8 +113,47 @@ header {
     right: 0;
     top: 0;
     left: 0;
-    bottom: 0; 
-    
-    background: rgba(0,0,0,.4);
+    bottom: 0;
+
+    background: rgba(0, 0, 0, .4);
   }
+}
+
+.menu-abrir,
+.menu-fechar {
+  background: none;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  font-size: 1.6em;
+  text-indent: -999em;
+}
+
+.menu-abrir {
+  height: 0;
+  width: .75em;
+  padding-top: .125em;
+  border-top: .375em double #000;
+  border-bottom: .125em solid #000;
+
+  vertical-align: middle;
+  margin: 0.5em;
+}
+
+.menu-fechar {
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+
+.menu-fechar:before {
+  content: '\00D7';
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: 0;
+}
+
+.logo img {
+  width: 200px;
 }
